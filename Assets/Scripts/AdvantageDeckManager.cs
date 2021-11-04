@@ -7,11 +7,12 @@ namespace Assets.Scripts
     public class AdvantageDeckManager : MonoBehaviour
     {
         private readonly UInt16 _fullDeckSize = 24;
+        private readobly UInt16 _cardsDrawedToRefresh = 3;
         private AdvantageDeckModel _deck;
 
         public AdvantageCardModel GetACard()
         {
-            if(_deck.Deck.Count == _fullDeckSize - 3)
+            if(_deck.Deck.Count == _fullDeckSize - _cardsDrawedToRefresh)
             {
                 GameObject.Find("RefreshDeckButton").GetComponent<Button>().onClick.Invoke();
             }
