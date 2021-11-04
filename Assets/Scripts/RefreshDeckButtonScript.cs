@@ -7,7 +7,7 @@ namespace Assets.Scripts
 {
     public class RefreshDeckButtonScript : MonoBehaviour
     {
-        private GameObject[] cradObjects;
+        private GameObject[] cardObjects;
         private AdvantageDeckManager deck;
         private List<Image> advantageCards = new List<Image>();
 
@@ -16,9 +16,9 @@ namespace Assets.Scripts
         {
             deck = GameObject.FindGameObjectWithTag("Deck").GetComponent<AdvantageDeckManager>();
 
-            cradObjects = GameObject.FindGameObjectsWithTag("AdvantageCardUI");// GetComponentsInParent<Image>().FirstOrDefault(obj => obj.tag == "AdvantageCard");
+            cardObjects = GameObject.FindGameObjectsWithTag("AdvantageCardUI");// GetComponentsInParent<Image>().FirstOrDefault(obj => obj.tag == "AdvantageCard");
             
-            foreach(var image in cradObjects)
+            foreach(var image in cardObjects)
             {
                  advantageCards.Add(image.GetComponentInChildren<Image>());
             }
@@ -45,12 +45,12 @@ namespace Assets.Scripts
 
             GetComponent<AudioSource>().Play();
 
-            foreach (var card in cradObjects)
+            foreach (var card in cardObjects)
             {
                 LeanTween.rotateZ(card, 179, 0.1f);
             }
 
-            foreach (var card in cradObjects)
+            foreach (var card in cardObjects)
             {
                 LeanTween.rotateZ(card, 0, 0.1f).setDelay(0.1f);
             }
