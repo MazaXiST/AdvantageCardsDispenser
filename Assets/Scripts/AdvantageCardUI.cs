@@ -10,6 +10,8 @@ namespace Assets.Scripts
         private AdvantageDeckManager deck;
         private Image advantageBonus;
 
+        //поля ниже инициализируются в UI редакторе
+        //to do: refactor
         public Sprite scullSprite;
         public Sprite swordSprite;
         public Sprite towerSprite;
