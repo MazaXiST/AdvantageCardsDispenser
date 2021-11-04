@@ -11,7 +11,7 @@ namespace Assets.Scripts
         private Image advantageBonus;
 
         //поля ниже инициализируются в UI редакторе
-        //to do: refactor
+        //to do: refactor (очень смущают паблик поля в коде)
         public Sprite scullSprite;
         public Sprite swordSprite;
         public Sprite towerSprite;
